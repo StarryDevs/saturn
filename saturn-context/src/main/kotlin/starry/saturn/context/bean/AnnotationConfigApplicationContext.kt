@@ -98,7 +98,7 @@ public open class AnnotationConfigApplicationContext private constructor() : Con
                 destroyMethod = beanClass.memberFunctions.firstOrNull { it.hasAnnotation<PreDestroy>() },
             )
             beans[beanDefinition.name] = beanDefinition
-            for (member in beanClass.java.methods.mapNotNull { it.kotlinFunction }) {
+            for (member in beanClass.java.methods.mapNotNull { it.kotlinFunction } + beanClass.memberProperties.map { it.getter }) {
                 val methodBeanAnnotation = member.findAnnotation<Bean>() ?: continue
                 val methodBeanDefinition = BeanDefinition(
                     member.returnType.classifier as KClass<*>,
