@@ -1,4 +1,4 @@
-package starry.saturn
+package starry.saturn.application
 
 import java.io.PrintStream
 
