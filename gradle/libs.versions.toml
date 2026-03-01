@@ -1,0 +1,15 @@
+[versions]
+kotlin = "2.3.10"
+logback = "1.5.32"
+
+[libraries]
+arrow-core = { module = "io.arrow-kt:arrow-core", version = "2.2.1.1" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+bytebuddy = { module = "net.bytebuddy:byte-buddy", version = "1.18.5" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.10.2" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+
+[bundles]
+
+[plugins]
